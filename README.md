@@ -1,155 +1,143 @@
-# C Development Environment Setup (Windows)  
-Complete Guide — MinGW-w64 + VS Code + CMake
+# Learn C in 21 Days - Setup and Getting Started
 
-This document explains how to set up a modern C development environment on Windows using:
-
-- **MinGW-w64** (GCC compiler)
-- **Visual Studio Code**
-- **CMake** (optional, recommended for projects)
-  
-This setup is ideal for beginners starting their C learning journey (e.g., “Learn C in 21 Days”).
+Welcome to the "Learn C in 21 Days" repository! This guide will help you clone the repo and set up your development environment on Windows using Visual Studio Code, MinGW, and CMake.
 
 ---
 
-# 📦 1. Install MinGW-w64 (GCC Compiler)
+## 1. Clone the Repository
 
-⚠️ Avoid the old “MinGW”.  
-Use **WinLibs MinGW-w64**, which is up-to-date and works well with VS Code & CMake.
+Open a terminal (Command Prompt or PowerShell) and run:
 
-### ✅ Steps:
+```bash
+git clone https://github.com/sagarembedded/learn-c-in-21-days.git
+cd learn-c-in-21-days
+```
 
-1. Download WinLibs MinGW-w64 (GCC)  
-2. Extract to a safe location, e.g.:  C:\mingw64
-3. Add MinGW to your system PATH:
-  - Press **Win+S** → type **Environment Variables**
-  - Open **Environment Variables**
-  - Under *User variables*, select **Path** → **Edit**
-  - Add:
-  ```
-  C:\mingw64\bin
-  ```
+Replace `<your-username>` with the repository owner’s GitHub username.
 
-4. Confirm installation by opening a new Terminal / PowerShell:
+---
 
-  ```bash
-  gcc --version
-  g++ --version
-  gdb --version
+## 2. Install Prerequisites
 
-# 🧰 2. Install Visual Studio Code
+To build and run the C programs, install the following tools:
 
-Download:
-VS Code (free)
+### Visual Studio Code
 
-Install with default options.
-
-Recommended Extensions:
-
-C/C++ (Microsoft)
-
-C/C++ Extension Pack (optional)
-
-CMake Tools (recommended)
-
-CMake (optional)
-
-#  📐 3. Install CMake (Optional but Recommended)
-
-If you plan to build multi-file C projects:
-
-Download CMake
-
-During setup, choose:
-✔ Add CMake to PATH for all users
+- Download and install from [Visual Studio Code](https://code.visualstudio.com/) and during setup:
+  - Add VS Code to PATH
+  - Register VS Code as editor for supported file types
+  - Add “Open with Code” in Windows Explorer context menu
 
 Verify installation:
 
+```bash
+code --version
+```
+
+### MinGW-w64 (GCC Compiler)
+
+- Visit: [https://www.mingw-w64.org/](https://www.mingw-w64.org/)
+- Download the Win64 build for x86_64 architecture
+- Install or extract to a simple folder like `C:\mingw-w64`
+- Add `C:\mingw-w64\bin` to your system PATH (via Environment Variables)
+
+Verify installation:
+
+```bash
+gcc --version
+g++ --version
+```
+
+### CMake
+
+- Download Windows installer from: [https://cmake.org/download/](https://cmake.org/download/)
+- During installation, choose to add CMake to system PATH
+- Verify installation:
+
+```bash
 cmake --version
-🧪 4. Test C Compiler (Hello World)
+```
 
-Create a new file hello.c:
+---
 
-#include <stdio.h>
+## 3. Configure Visual Studio Code
 
-int main() {
-    printf("Hello, World!\\n");
-    return 0;
-}
+- Open VS Code and install these extensions:
+  - C/C++ (by Microsoft)
+  - CMake Tools (optional)
+- Open Command Palette (Ctrl+Shift+P)  `C/C++: Edit Configurations (UI)`
+- Set Compiler path to your MinGW GCC executable, e.g.:
 
+```
+C:\mingw-w64\bin\gcc.exe
+```
 
-Compile:
+---
 
-gcc hello.c -o hello.exe
+## 4. Daily Topics
 
+- **Day 1:** Introduction and Setup
+- **Day 2:** Basic Syntax and Data Types
+- **Day 3:** Control Flow: If, Switch
+- **Day 4:** Loops: For, While, Do-While
+- **Day 5:** Functions and Recursion
+- **Day 6:** Arrays and Strings
+- **Day 7:** Pointers Basics
+- **Day 8:** Advanced Pointers
+- **Day 9:** Structures and Unions
+- **Day 10:** File I/O
+- **Day 11:** Dynamic Memory Allocation
+- **Day 12:** Preprocessor Directives
+- **Day 13:** Error Handling
+- **Day 14:** Modular Programming
+- **Day 15:** Linked Lists
+- **Day 16:** Stacks and Queues
+- **Day 17:** Searching and Sorting Algorithms
+- **Day 18:** Bitwise Operations
+- **Day 19:** Multi-file Projects
+- **Day 20:** Basic Data Structures
+- **Day 21:** Project: Small C Application
 
-Run:
+---
 
-./hello.exe
+## 5. Build and Run Your Code
 
+### Using CMake
 
-You should see:
+From terminal in the repo folder:
 
-Hello, World!
+```bash
+mkdir build
+cd build
+cmake ..
+cmake --build .
+```
 
-# 📁 5. (Optional) Basic CMake Project Setup
+### Using VS Code Build Task
 
-Create a folder structure:
+Press `Ctrl+Shift+B` to build using predefined tasks for daily exercises (e.g., `day01/main.c`).
 
-project/
- ├── CMakeLists.txt
- └── main.c
+Run the compiled executable from the terminal:
 
-CMakeLists.txt:
-cmake_minimum_required(VERSION 3.15)
-project(MyCProject C)
+```bash
+./day01/day01.exe
+```
 
-set(CMAKE_C_STANDARD 11)
+---
 
-add_executable(myapp main.c)
+## 6. Daily Learning Workflow
 
-main.c:
-#include <stdio.h>
+- Explore folders `day01` through `day21`.
+- Edit or review C source code.
+- Build and run to understand C concepts practically.
 
-int main() {
-    printf("Hello from CMake!\\n");
-    return 0;
-}
+---
 
-Build using CMake + MinGW:
-cmake -S . -B build -G "MinGW Makefiles"
-cmake --build build
+## 7. Useful Links
 
+- MinGW-w64: https://www.mingw-w64.org/
+- CMake: https://cmake.org/
 
-Run:
+---
 
-./build/myapp.exe
-
-✔ Setup Completed
-
-You now have:
-
-MinGW-w64 GCC Compiler
-
-VS Code configured for C
-
-(Optional) CMake build system
-
-A working test program
-
-You're ready to begin your C learning roadmap.
-
-# 📚 Next Step: Learn C in 21 Days
-
-This repository will later include:
-
-Daily C learning modules
-
-Example programs
-
-Practice exercises
-
-Mini-projects
-
-Advanced C topics
-
-Stay tuned!
+Happy coding on your journey to learn C!
