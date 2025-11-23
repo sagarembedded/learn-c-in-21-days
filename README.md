@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/sagarembedded/learn-c-in-21-days.git/banner.png" alt="C Programming 21-Day Roadmap Banner" width="700"/>
+  <img src="https://raw.githubusercontent.com/sagarembedded/learn-c-in-21-days/refs/heads/main/banner.png" alt="EmbeddedHub"  width="500x500"/>
 </p>
 
 <h1 align="center">C Programming – 21 Day Mastery Roadmap</h1>
