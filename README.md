@@ -13,8 +13,6 @@ git clone https://github.com/sagarembedded/learn-c-in-21-days.git
 cd learn-c-in-21-days
 ```
 
-Replace `<your-username>` with the repository owner’s GitHub username.
-
 ---
 
 ## 2. Install Prerequisites
