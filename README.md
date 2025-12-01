@@ -1,140 +1,27 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/sagarembedded/learn-c-in-21-days/refs/heads/main/banner.png" alt="EmbeddedHub"  width="500x500"/>
-</p>
+# Sams Teach Yourself C in 21 Days - Topics Overview
 
-<h1 align="center">C Programming – 21 Day Mastery Roadmap</h1>
-<p align="center">
-  <strong>Structured, practical, hands-on roadmap for mastering C programming</strong>
-</p>
+This document summarizes the content of *Sams Teach Yourself C in 21 Days, 6th Edition* by Bradley L. Jones and Peter Aitken. Each day includes the main topic and its subtopics.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Language-C-blue.svg" alt="Language: C"/>
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"/>
-  <img src="https://img.shields.io/badge/Build-Pending-lightgrey.svg" alt="Build Status"/>
-</p>
-
----
-
-## 🌟 Overview
-
-This repository provides a **21-day learning roadmap for C**, combining the structured approach of *Sams Teach Yourself C in 21 Days (6th Edition)* with practical insights from *Let Us C* by Yashavant Kanetkar.  
-
-By following this roadmap, you will:
-
-- Learn and apply core C concepts  
-- Write clean, efficient C programs  
-- Be ready for embedded systems and system-level programming  
-
-The repository contains **day-wise folders** (`Day_01_Introduction` … `Day_21_Final_Project`) with:
-
-- `README.md` for the day’s objectives and explanations  
-- `examples/` folder with complete C code  
-- `exercises.md` for practice problems and solutions  
-- `.vscode/` folder pre-configured for building and debugging  
-
----
-
-## 🟢 Get Started: Clone the Repository
-
-Clone this repository to your local machine:
-
-```bash
-git clone https://github.com/yourusername/learn-c-in-21-days.git
-```
-Navigate into the project folder:
-```bash
-cd learn-c-in-21-days
-```
-Open the project in VS Code to start following the 21-day roadmap.
-
-## 🛠️ Tools & Setup
-### 1️⃣ MinGW (GCC Compiler)
-- Download: [MinGW-w64](https://www.mingw-w64.org/downloads/)
-- Add to PATH: C:\mingw-w64\bin
-- Verify:
-```bash
-gcc --version
-```
-### 2️⃣ CMake
-- Download: [CMake](https://cmake.org/download/)
-- Verify:
-```bash
-cmake --version
-```
-### 3️⃣ Visual Studio Code
-- Download: [VS Code](https://code.visualstudio.com/)
-- Install extensions:
-    - C/C++
-    - CMake Tools
-    - Code Runner (optional)
-
-## 🚀 How to Compile & Run Examples
-You can compile and run C programs using VS Code tasks (recommended) or the command line.
-
-### 1️⃣ Using VS Code Tasks (Recommended)
-1. Open any example file in VS Code, e.g., Day_01_Introduction/examples/example.c.
-2. Press Ctrl+Shift+B to build the current file.
-    * The executable will be created in the same folder as the source file.
-3. Press F5 to run and debug the program using the configured debugger (launch.json).
-
-This workflow automatically uses the .vscode/tasks.json and .vscode/launch.json configuration.
-
-### 2️⃣ Using Command Line (Optional)
-```bash
-# Navigate to the example folder
-cd Day_01_Introduction/examples
-
-# Compile the C program
-gcc example.c -o example.exe
-
-# Run the compiled program
-./example.exe
-```
-#### 💡 Tip: For multi-file projects, using CMake with VS Code is recommended.
-
-## 📅 21-Day Roadmap Table
-
-| Day | Objective                        | Description                                                        |
-| --- | -------------------------------- | ------------------------------------------------------------------ |
-| 1   | Introduction & Environment Setup | Learn about C history, tools, and first programs                   |
-| 2   | Variables & Data Types           | Primitive types, type casting, constants, scope                    |
-| 3   | Operators                        | Arithmetic, logical, bitwise, assignment, precedence               |
-| 4   | Conditional Statements           | `if`, `if-else`, `switch` statements                               |
-| 5   | Loops                            | `for`, `while`, `do-while`, break/continue                         |
-| 6   | Functions                        | Declaration, definition, call, recursion, scope                    |
-| 7   | Pointers                         | Pointer basics, arithmetic, pointer to functions                   |
-| 8   | Arrays & Strings                 | Single/multi-dimensional arrays, strings, passing arrays           |
-| 9   | Structures                       | Structs, typedef, nested structs, arrays of structs                |
-| 10  | File Handling                    | File open/close, read/write, binary vs text                        |
-| 11  | Dynamic Memory                   | malloc, calloc, realloc, free, memory management                   |
-| 12  | Preprocessor & Macros            | #define, #include, #ifdef, conditional compilation                 |
-| 13  | Command-line Arguments           | `argc`, `argv`, processing input                                   |
-| 14  | Recursion                        | Recursive functions, factorial, Fibonacci                          |
-| 15  | Storage Classes                  | auto, register, static, extern, global variables                   |
-| 16  | Bitwise Operations               | Bit manipulation, masks, shifting                                  |
-| 17  | Advanced Pointers                | Pointers to pointers, function pointers, arrays of pointers        |
-| 18  | Multi-dimensional Arrays         | 2D/3D arrays, pointer arithmetic, memory considerations            |
-| 19  | Modular Programming              | Header files, multi-file projects, compiling with CMake            |
-| 20  | Debugging & Best Practices       | Debugging with VS Code/GDB, error handling, code style             |
-| 21  | Final Project & Review           | Integrate all concepts into a full C project, review, optimization |
-
-## 🎯 Learning Outcomes
-
-By Day 21, you will:
-
-- Master arrays, pointers, memory management, and strings
-- Write optimized, clean, and maintainable C programs
-- Debug programs efficiently
-- Apply C skills to embedded systems or real-world projects
-
-## 📚 References
-
-- Sams Teach Yourself C in 21 Days, 6th Edition
-- Let Us C by Yashavant Kanetkar
-
-## ⚡ License
-
-This project is licensed under MIT License – free for learning and teaching.
-
-##
-<p align="center"> Made with ❤️ for aspiring C developers </p>
+| Day | Topic | Subtopics |
+|-----|-------|-----------|
+| 1   | Getting Started with C | A Brief History of the C Language; Why Use C?; Preparing to Program; The Program Development Cycle; Your First C Program; Type & Run 1: Printing Your Listings |
+| 2   | The Components of a C Program | A Short C Program; The Program’s Components; Review of the Parts of a Program |
+| 3   | Storing Information: Variables and Constants | Understanding Your Computer’s Memory; Storing Information with Variables; Numeric Variable Types; Constants |
+| 4   | Statements, Expressions, and Operators | Statements; Understanding Expressions; Operators; The if Statement; Evaluating Relational Expressions; Logical Operators; True/False Values; Operator Precedence; Type & Run 2: Find the Number |
+| 5   | Packaging Code in Functions | What Is a Function?; How a Function Works; Functions and Structured Programming; Writing a Function; Passing Arguments to a Function; Calling Functions; Where Functions Belong; Working with Inline Functions |
+| 6   | Basic Program Control | Arrays: The Basics; Controlling Program Execution; Nested Loops |
+| 7   | Fundamentals of Reading and Writing Information | Displaying Information On‑Screen; Inputting Numeric Data with scanf(); Using Trigraph Sequences |
+| 8   | Using Numeric Arrays | What Is an Array?; Naming and Declaring Arrays |
+| 9   | Understanding Pointers | What Is a Pointer?; Pointers and Simple Variables; Pointers and Variable Types; Pointers and Arrays; Pointer Cautions; Array Subscript Notation and Pointers; Passing Arrays to Functions; Type & Run 3: Pausing for a Second or Two |
+| 10  | Working with Characters and Strings | The char Data Type; Using Character Variables; Using Strings; Strings and Pointers; Strings Without Arrays; Displaying Strings and Characters; Reading Strings from the Keyboard |
+| 11  | Implementing Structures, Unions, and typedefs | Working with Simple Structures; More Complex Structures; Arrays of Structures; Initializing Structures; Structures and Pointers; Understanding Unions; Creating Synonyms with typedef |
+| 12  | Understanding Variable Scope | What Is Scope?; External Variables; Local Variables; Local Variables & main() Function; Storage Classes; Local Variables and Blocks; Type & Run 4: Secret Messages |
+| 13  | Advanced Program Control | Ending Loops Early; The goto Statement; Infinite Loops; The switch Statement; Exiting the Program; Executing OS Commands |
+| 14  | Working with the Screen, Printer, and Keyboard | Streams in C; Using C’s Stream Functions; Accepting Keyboard Input; Controlling Screen Output; Redirecting Input and Output; Using fprintf() |
+| 15  | Pointers: Beyond the Basics | Pointers to Pointers; Pointers & Multidimensional Arrays; Arrays of Pointers; Pointers to Functions; Bonus: Understanding Linked Lists |
+| 16  | Using Disk Files | Streams and Disk Files; Types of Disk Files; Using Filenames; Opening a File; Writing and Reading File Data; File Buffering: Closing & Flushing; Sequential vs Random File Access; Detecting End of File; File Management Functions; Using Temporary Files; Type & Run 5: Counting Characters |
+| 17  | Manipulating Strings | Determining String Length; Copying Strings; Concatenating Strings; Comparing Strings; Searching Strings; String Conversions; Miscellaneous String Functions; String-to-Number Conversions; Character Test Functions |
+| 18  | Getting More from Functions | Passing Pointers to Functions; void Pointers; Variable-Argument Functions; Functions That Return a Pointer |
+| 19  | Exploring the C Function Library | Mathematical Functions; Dealing with Time; Error Handling; Searching & Sorting; Type & Run 6: Calculating Mortgage Payments |
+| 20  | Working with Memory | Type Conversions; Allocating Memory (dynamic); Manipulating Memory Blocks; Working with Bits |
+| 21  | Advanced Compiler Use | Programming with Multiple Source Files; The C Preprocessor; Predefined Macros; Command-Line Arguments |
